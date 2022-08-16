@@ -1,0 +1,25 @@
+import math
+def nearestPerfectSquare(arr,N):
+     
+    # Traverse the array
+    for i in range(0,N):
+ 
+        # Calculate square root of
+        # current  element
+        sr = math.ceil(math.sqrt(arr[i]))
+        
+ 
+        # Calculate perfect square
+        a = (sr-1) * (sr-1)
+        b = (sr + 1) * (sr + 1)
+ 
+        # Find the nearest
+        if ((arr[i] - a) < (b - arr[i])):
+           print(a ,end=" ")
+        else :
+           print(b ,end=" ")
+         
+# Driver Code
+arr =  [1,56,100]
+N = len(arr)
+nearestPerfectSquare(arr, N)
